@@ -1,0 +1,223 @@
+body {
+  background: #f8f9fa;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.app-container {
+  background: #fff;
+  max-width: 500px;
+  margin: 56px auto 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 32px rgba(60,60,80,0.10);
+  padding: 32px 32px 24px 32px;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: 20px;
+  color: #306090;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.06rem;
+  color: #4977ad;
+  margin-bottom: 24px;
+}
+
+.upload-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 12px;
+}
+
+.file-upload-label {
+  display: inline-block;
+  background: linear-gradient(90deg, #e0e8ff 60%, #dbfff4 100%);
+  color: #275497;
+  padding: 10px 22px;
+  font-size: 1.07rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid #b7d0fa;
+  margin-right: 14px;
+  box-shadow: 0 2px 8px #527aff11;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s, color 0.18s;
+}
+
+.file-upload-label:hover,
+.file-upload-label:focus {
+  background: linear-gradient(90deg, #c8dafe 60%, #b9ffeb 100%);
+  color: #114377;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.upload-form input[type="file"] {
+  border: 1px solid #c2c4c7;
+  border-radius: 4px;
+  background: #f3f6fa;
+  padding: 6px;
+  font-size: 1rem;
+}
+
+.upload-form button {
+  background: linear-gradient(90deg, #527aff 60%, #36dac6 100%);
+  color: #fff;
+  padding: 10px 28px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 1.09rem;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px #527aff24;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.12s, box-shadow 0.2s;
+}
+
+.upload-form button:hover,
+.upload-form button:focus {
+  background: linear-gradient(90deg, #3e69e2 70%, #1fd0ad 100%);
+  opacity: 0.93;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px #36dac645;
+  outline: none;
+}
+
+.status-message {
+  color: #444;
+  padding: 10px;
+  background: #e9f0ff;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+.error-message {
+  margin: 18px 0 14px 0;
+  padding: 10px 22px;
+  color: #b30000;
+  background: #ffeaea;
+  border-left: 5px solid #d20000;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1.07rem;
+  white-space: pre-line;
+}
+
+.summary-section {
+  margin-top: 18px;
+  background: #f6f8fc;
+  border-radius: 12px;
+  box-shadow: 0 3px 28px #3279ec11;
+  padding: 28px 20px 18px 26px;
+  border-left: 6px solid #3279ec;
+  border-right: 1.5px solid #e3eefe;
+  border-bottom: 1.5px solid #e3eefe;
+  border-top: 0;
+  min-height: 80px;
+}
+.summary-section h2 {
+  margin-top: 0;
+  color: #2262ac;
+  font-size: 1.22rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.summary-section pre {
+  white-space: pre-wrap;
+  font-size: 1.11rem;
+  word-break: break-word;
+  margin: 8px 0 0 0;
+  font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', 'Arial', monospace;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #244169;
+  line-height: 1.55;
+}
+.summary-download-row {
+  display: flex;
+  gap: 16px;
+  margin: 0 0 10px 0;
+}
+.summary-download-btn {
+  background: linear-gradient(93deg, #148ffc 60%, #56dfad 100%);
+  color: #fff;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #4f98e552;
+  transition: background 0.18s, transform 0.13s;
+}
+.summary-download-btn:hover {
+  background: linear-gradient(89deg, #167ceb 60%, #40bb8a 100%);
+  transform: scale(1.03);
+}
+
+/* New Progressbar Styles */
+.progressbar-container {
+  width: 100%;
+  margin: 18px 0 8px 0;
+  height: 16px;
+  background: #e1e8fb;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px #8fc1f855;
+  display: block;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #5e9eff 30%, #36dac6 100%);
+  border-radius: 7px 0 0 7px;
+  transition: width 0.2s;
+}
+
+.progress-stages {
+  margin-top: 18px;
+}
+
+.progress-label {
+  font-size: 1.03rem;
+  color: #4582c7;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.file-chosen-message {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  margin-left: 2px;
+  background: #e8f7ef;
+  color: #218748;
+  font-weight: 500;
+  font-size: 1.01rem;
+  border-radius: 5px;
+  padding: 5px 13px 5px 9px;
+  box-shadow: 0 1px 6px #41c58b17;
+}
+.file-chosen-icon {
+  font-size: 1.11em;
+}
+.file-chosen-name {
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  color: #305077;
+  font-weight: 600;
+}

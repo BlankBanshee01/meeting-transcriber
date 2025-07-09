@@ -1,0 +1,8 @@
+# backend
+/tmp
+.env
+*.log
+
+# frontend
+node_modules/
+build

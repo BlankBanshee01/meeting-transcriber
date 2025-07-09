@@ -1,0 +1,39 @@
+import React, { useRef } from "react";
+
+const UploadForm = ({ setSummary, setLoading }) => {
+  const fileInput = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSummary("");
+    setLoading(true);
+    const formData = new FormData();
+    formData.append("file", fileInput.current.files[0]);
+
+    try {
+      const res = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      setSummary(data.summary || data.error || "No summary returned");
+    } catch (err) {
+      setSummary("Upload failed or server error.");
+    }
+    setLoading(false);
+  };
+
+  return (
+    <form className="upload-form" onSubmit={handleSubmit}>
+      <input
+        ref={fileInput}
+        type="file"
+        accept=".mp3,audio/mp3"
+        required
+      />
+      <button type="submit">Upload & Summarize</button>
+    </form>
+  );
+};
+
+export default UploadForm;

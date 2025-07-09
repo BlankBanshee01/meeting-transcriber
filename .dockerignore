@@ -1,0 +1,8 @@
+node_modules
+frontend/node_modules
+backend/tmp
+frontend/build
+*.log
+*.md
+.git
+.gitignore
