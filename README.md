@@ -4,16 +4,6 @@ Automatic Meeting Assistant is a web-based application that lets you upload an M
 
 ---
 
-## Directory Structure
-
-meeting-assistant/
-├── backend/      # Go backend code and Dockerfile
-├── frontend/     # React frontend code, Dockerfile, nginx.conf
-├── docker-compose.yml
-├── .env          # Your OpenAI API key here (not tracked in git)
-└── README.md
----
-
 ## Features
 
 - Upload your MP3 meeting recordings for instant AI-powered summaries
@@ -37,50 +27,26 @@ meeting-assistant/
 
 ### 1. Clone the Repository
 
-
+```sh
 git clone https://github.com/your-username/meeting-assistant.git
 cd meeting-assistant
+```
 
-
-
-### 2. Directory Structure
-
-
-meeting-assistant/
-├── backend/      # Go backend code and Dockerfile
-├── frontend/     # React frontend code, Dockerfile, nginx.conf
-├── docker-compose.yml
-├── .env          # Your OpenAI API key here (not tracked in git)
-└── README.md
-### 3. Create Your `.env` File
+### 2. Create Your `.env` File
 
 Create a file named `.env` in your project root (same directory as `docker-compose.yml`).
 It should contain your OpenAI API key:
 
-
+```sh
 OPENAI_API_KEY=your-openai-api-key-here
+```
 
+### 3. Build the Docker Images
 
-### 4. Start the Application
-
-docker-compose up
-
-This will:
-- Start the backend at http://localhost:8080
-- Start the frontend at http://localhost:3000 (via Nginx proxy)
-
-
-
-
-### 5. Use the App
-
-- Visit http://localhost:3000 in your browser
-- Upload an .mp3 file under 10MB
-- Watch the real-time progress bar as your meeting is uploaded, transcribed, and summarized
-- View and download your summary as .txt or .md
-
----
-
+Build the frontend + backend images:
+```sh
+docker build
+```
 
 ### 4. Start the Application
 
